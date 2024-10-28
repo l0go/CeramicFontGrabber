@@ -1,0 +1,10 @@
+-cp src/
+-cp vendor/http/src/
+-cp vendor/logging/src/
+-cp vendor/promises/src/
+-cp vendor/queues-core/src/
+-cp vendor/fuzzaldrin/src/
+-lib hxnodejs
+--macro queues.macros.QueueTypes.register("non-queue", "queues.NonQueue")
+--main Main
+--js main.js

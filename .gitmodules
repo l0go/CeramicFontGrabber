@@ -1,0 +1,15 @@
+[submodule "vendor/http"]
+	path = vendor/http
+	url = https://github.com/core-haxe/http
+[submodule "vendor/promises"]
+	path = vendor/promises
+	url = https://github.com/core-haxe/promises
+[submodule "vendor/logging"]
+	path = vendor/logging
+	url = https://github.com/core-haxe/logging
+[submodule "vendor/queues-core"]
+	path = vendor/queues-core
+	url = https://github.com/core-haxe/queues-core
+[submodule "vendor/fuzzaldrin"]
+	path = vendor/fuzzaldrin
+	url = https://github.com/jeremyfa/fuzzaldrin/
