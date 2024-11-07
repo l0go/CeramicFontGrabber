@@ -1,5 +1,5 @@
 # CeramicFontGrabber
-A little tool that downloads and converts Google Fonts to a format accepted by [https://ceramic-engine.com/](Ceramic Engine). Additionally it will generate the ``font_weights`` and ``font_italics`` options for [https://github.com/Jarrio/haxeui-ceramic/](haxeui-ceramic).
+A little tool that downloads and converts Google Fonts to a format accepted by [Ceramic Engine](https://ceramic-engine.com/). Additionally it will generate the ``font_weights`` and ``font_italics`` options for  [haxeui-ceramic](https://github.com/Jarrio/haxeui-ceramic/).
 
 ## Requirements
 - Haxe (Tested on version 4.3.4)
