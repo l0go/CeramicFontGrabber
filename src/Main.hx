@@ -18,7 +18,7 @@ class Main {
 		"grab" => {
 			constructor: GrabCommand.new,
 			description: "Downloads the given Google Font family and generates msdf fonts",
-			usage: 'grab --family "Open Sans" --gen-haxeui-weight --output assets/',
+			usage: 'grab --family "Open Sans" --haxeui-options --output assets/',
 		},
 	];
 
@@ -27,21 +27,23 @@ class Main {
 
 		// Incredibly basic arg parser, but it does the job
 		var i = 0;
-		final command = args[i++].toLowerCase();
+		final command = args[i++]?.toLowerCase();
 		if (command == "--help") {
 			help();
 			Sys.exit(0);
-		} else if (!commands.exists(command)) {
-			Sys.println("command not found: " + command);
+		} else if (command == null || !commands.exists(command)) {
+			if (command != null) {
+				Sys.println("command not found: " + command);
+			}
 			help();
 			Sys.exit(-1);
 		}
 
 		final tokens = [while (args.length > i) {
 			if (args[i].startsWith("--") && !(args[i + 1] ?? "--").startsWith("--")) {
-				ValueFlag(args[i].substr(2), args[++i]);
+				ValueFlag(args[i].substr(2).toLowerCase(), args[++i]);
 			} else if (args[i].startsWith("--")) {
-				OptionFlag(args[i++].substr(2));
+				OptionFlag(args[i++].substr(2).toLowerCase());
 			} else {
 				i++;
 				continue;
